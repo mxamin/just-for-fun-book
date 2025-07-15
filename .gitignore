@@ -29,11 +29,6 @@
 # MacOS-specific
 .DS_Store
 
-# PDF and other output files
-*.pdf
-*.ps
-*.dvi
-
 # Temporary folders
 _build/
 latex.out/
