@@ -1,0 +1,72 @@
+% coding
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.85,0.85,0.85}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{black}{rgb}{0,0,0}
+\definecolor{red}{rgb}{1,0,0}
+
+\lstset{
+	%language=bash,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	backgroundcolor=\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+  	stringstyle=\color{mauve},
+  	breaklines=true,
+  	tabsize=4
+}
+
+\deflatinfont\codefont[Scale=0.9]{Courier 10 Pitch}
+%\deflatinfont\codefont[Scale=0.9]{Courier New}
+\newcommand{\code}[1]{\lr{\codefont #1}}
+
+\newcommand{\LFootnote}[1]{\LTRfootnote{#1}}
+\newcommand{\RFootnote}[1]{\footnote{#1}}
+\newcommand{\dbquote}[1]{\textquotedblright#1\textquotedblleft}
+\newcommand{\xquote}[1]{\textquoteright#1\textquoteleft}
+
+% journal
+\newenvironment{journal}
+        {\newpage
+        \begin{itshape}}
+        {\end{itshape}}
+
+% journalinside
+\newenvironment{journalinside}
+        {\vspace*{15pt}
+        \begin{itshape}}
+        {\end{itshape}}
+
+% dialogue
+\newcommand{\speakbf}[1]{\speak{\bf #1}}
+\newcommand{\linus}{\speakbf{لینوس}}
+\newcommand{\david}{\speakbf{دیوید}}
+\newcommand{\tove}{\speakbf{تاو}}
+\newcommand{\patricia}{\speakbf{پاتریشیا}}
+
+% alert
+\definecolor{medred}{HTML}{F2DEDE}
+\definecolor{medbrown}{HTML}{A94442}
+\newenvironment{alertbox}
+        {\noindent
+        \begin{mdframed}[roundcorner=5pt, backgroundcolor=medred, fontcolor=medbrown, innerrightmargin=10pt, innerleftmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt, hidealllines=true]}
+        {\end{mdframed}}
+
+% email
+\definecolor{medgray}{HTML}{EEEEEE}
+\newenvironment{emailbox}
+        {\noindent
+        \begin{mdframed}[tikzsetting={draw=black,dashed,line width=2pt,dash pattern = on 6pt off 5pt}, roundcorner=3pt, linecolor=white, backgroundcolor=gray!50, innerrightmargin=10pt, innerleftmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+        \baselineskip=0.75cm}
+        {\end{mdframed}}
+
+% well
+\newenvironment{wellbox}
+        {\vspace*{10pt}
+        \begin{mdframed}[roundcorner=5pt, backgroundcolor=gray!70, innerrightmargin=20pt, innerleftmargin=20pt, innertopmargin=10pt, innerbottommargin=10pt, hidealllines=true]
+        \vspace*{10pt}
+        \baselineskip=0.75cm}
+        {\vspace*{10pt}
+        \end{mdframed}
+        \vspace*{10pt}}

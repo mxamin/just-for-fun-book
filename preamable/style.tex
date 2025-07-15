@@ -1,0 +1,35 @@
+\MakePerPage{footnote}
+\geometry{a4paper, tmargin=20mm, bmargin=20mm, footskip=10mm}
+%\geometry{a5paper, tmargin=20mm, bmargin=20mm, rmargin=15mm, lmargin=10mm, footskip=10mm}
+
+% removes hyper border
+\hypersetup{ pdfborder = {0 0 0} }
+
+% header
+\pagestyle{fancy}
+\fancyhf[LE,RO,LO,RE]{}
+\fancyhead[RO,LE]{\hrule \vspace{1pt} \bfseries \leftmark \rightmark \vspace{1pt}}
+\fancyhead[LO]{\bfseries صفحهٔ \thepage\vspace{1pt}}
+\fancyhead[RE]{\vspace{1pt}\bfseries صفحهٔ \thepage}
+\cfoot{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\ifthenelse{\isempty{#1}}
+                                {\markright{#1}}
+                                {\markright{، #1}}}
+
+% start each section in a new page
+\let\stdsection\section
+\renewcommand{\section}{\newpage\stdsection}
+
+% removes chapter word and its index from content
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{}
+
+% removes section numbering in toc
+\makeatletter
+\renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}}
+\renewcommand{\cftsecaftersnum}{\end{lrbox}}
+\makeatother
+
+% removes section index from content
+\renewcommand{\thesection}{}
